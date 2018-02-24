@@ -70,7 +70,12 @@ export default function (englishString) {
   for (let i = 0; i < parts.length; i += 2) {
     if (parts[i] && i + 1 <= parts.length) {
       // Convert the amount string/number to a number
-      let amount = w2n.convert(parts[i].replace(/[^a-zA-Z0-9]/, '').replace('and', '').trim())
+      let amount = w2n.convert(parts[i].replace(/[^a-zA-Z0-9]\s/, '').replace('and', '').trim())
+
+      // If the amount could not be conveted/is below 1, ignore it
+      if (isNaN(amount)) {
+        continue
+      }
 
       // Get the period being defined, adding "s" to the end if using the singular
       let period = replaceAlternative(parts[i + 1])
