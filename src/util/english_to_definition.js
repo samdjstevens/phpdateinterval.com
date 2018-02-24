@@ -27,7 +27,7 @@ function replaceAlternative(alt) {
 // compile the period name regex
 let regExp = (_ => {
   let explodeTerms = []
-  let periods = ['years', 'months', 'weeks', 'days', 'hours', 'miniutes', 'seconds']
+  let periods = ['years', 'months', 'weeks', 'days', 'hours', 'minutes', 'seconds']
 
   for (let i = 0; i < periods.length; i++) {
     explodeTerms.push(periods[i])
