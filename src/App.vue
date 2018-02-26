@@ -14,6 +14,7 @@
       <button v-on:click="setPeriodInEnglish('one year')">one year</button>
       <button v-on:click="setPeriodInEnglish('one month')">one month</button>
       <button v-on:click="setPeriodInEnglish('2 weeks')">two weeks</button>
+      <button v-on:click="setPeriodInEnglish('one day')">1 day</button>
       <button v-on:click="setPeriodInEnglish('one hour')">1 hour</button>
       <button v-on:click="setPeriodInEnglish('five minutes')">5 minutes</button>
     </div>
@@ -24,7 +25,7 @@
 
     <p>
       this website generates the
-      <a href="https://en.wikipedia.org/wiki/ISO_8601#Time_intervals" target="_blank">ISO 8601 string</a>
+      <a href="https://en.wikipedia.org/wiki/ISO_8601#Time_intervals" target="_blank">ISO 8601 spec</a> string
       needed in the PHP
       <a href="http://php.net/manual/en/class.dateinterval.php" target="_blank"><code>DateInterval</code></a>
       constructor, for a given period of time.
