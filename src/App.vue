@@ -6,7 +6,12 @@
     </h1>
 
     <span class="inEnglish" v-if="definition">{{ definitionInEnglish }}</span>
-    <span class="inEnglish invalid" v-if="! definition">could not understand the input :(</span>
+    <span class="inEnglish invalid" v-if="periodInEnglish.length && ! definition">
+      could not understand the input :(
+    </span>
+    <span class="inEnglish" v-if="! periodInEnglish.length">
+      enter a date period in english below
+    </span>
 
     <input class="text-input" type="text" v-model="periodInEnglish" ref="input">
 
